@@ -192,13 +192,13 @@ The installer runs an interactive wizard and prompts for:
 | Cluster (compute cluster) | `/TESTLAB-DC/host/esxi01-testlab` *(auto-detected if only one exists)* |
 | Default Datastore | `/TESTLAB-DC/datastore/Unity-DS1` |
 | Network | `VM Network` |
-| Virtual IP Address for API | `192.168.x.x` |
-| Virtual IP Address for Ingress | `192.168.x.x` |
+| Virtual IP Address for API | `192.x.x.x` |
+| Virtual IP Address for Ingress | `192.x.x.x` |
 | Base Domain | `testlab.local` |
 | Cluster Name | `ocp418` |
 | Pull Secret | *(pasted — see below)* |
 
-![install-config.yaml wizard – vCenter and network prompts](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%209%20-%20Create%20Intall-Config%20YAML.jpg)
+![install-config.yaml wizard – vCenter and network prompts](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/524b0e2f207ed5b2c6d03dd02379c7dbfd345f2f/Images/Step%209%20-%20Create%20Install-Config%20YAML.png)
 
 For the **Pull Secret** prompt, go back to the Hybrid Cloud Console page from Step 5 and click **Copy pull secret**:
 
