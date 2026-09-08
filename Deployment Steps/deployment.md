@@ -65,7 +65,7 @@ Configure a DHCP server (Windows DHCP role, `dnsmasq`, `isc-dhcp-server`, etc.) 
    - Select **Linux – RHEL 9** and click **Download command-line tools** to get the `oc` client.
    - Note the **Pull secret** section here too — you'll need it in Step 9.
 
-![Red Hat Hybrid Cloud Console – download installer and CLI](Images/Step 5 - Openshift Hybrid Cloud Console - Openshift Installer Download.jpg)
+![Red Hat Hybrid Cloud Console – download installer and CLI](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a309d86a8e02be72c2145f39ac1c607f5a40506f/Images/Step%205%20-%20Openshift%20Hybrid%20Cloud%20Console%20-%20Openshift%20Installer%20Download.jpg)
 
 ---
 
