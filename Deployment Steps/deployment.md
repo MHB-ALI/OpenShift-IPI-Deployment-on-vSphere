@@ -268,4 +268,4 @@ This removes all vCenter resources the installer created, after which you can co
 | 8 | Extract and install the CLI/installer binaries |
 | 9 | Generate `install-config.yaml` and run `create cluster` |
 
-*Previous: [Prerequisites](./01-prerequisites.md)*
+*Previous: [Prerequisites](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/179a90a1811ee46da78c7b4411ec309f27c08e5d/Prerequisites/prerequisites.md)*
