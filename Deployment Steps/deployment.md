@@ -75,7 +75,7 @@ Configure a DHCP server (Windows DHCP role, `dnsmasq`, `isc-dhcp-server`, etc.) 
 
 Open your vCenter home page, right-click **Download trusted root CA certificates**, and choose **Save Link As**. This downloads a `download.zip` file.
 
-![Downloading the vCenter trusted root CA certificate](./images/02-vcenter-download-ca-cert.jpg)
+![Downloading the vCenter trusted root CA certificate]([./images/02-vcenter-download-ca-cert.jpg](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20vCenter%20Trusted%20Root%20CA%20Download.jpg))
 
 Upload `download.zip` to your `oc-helper` Linux machine, then unzip it:
 
@@ -85,7 +85,7 @@ unzip download.zip
 
 This produces a `certs/` directory with subfolders for each OS (`lin`, `mac`, `win`):
 
-![Unzipped CA certificate directory structure](./images/03-unzip-ca-cert-tree.png)
+![Unzipped CA certificate directory structure]([./images/03-unzip-ca-cert-tree.png](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20vCenter%20Cert%20Folder.png))
 
 > **Why this matters:** Because the installation program communicates with your vCenter's API over HTTPS, you must add vCenter's trusted root CA certificates to your Linux system's certificate trust store *before* installing OpenShift — otherwise the installer will fail to validate the connection to vCenter.
 
@@ -97,7 +97,7 @@ This key pair lets you authenticate to the OpenShift cluster's nodes after deplo
 ssh-keygen
 ```
 
-![Generating the SSH key pair](./images/04-ssh-keygen.jpg)
+![Generating the SSH key pair]([./images/04-ssh-keygen.jpg](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20Generate%20Local%20Certificate.jpg))
 
 Accept the defaults (saves to `~/.ssh/id_rsa` / `~/.ssh/id_rsa.pub`) unless you have a reason to use a custom path.
 
@@ -109,7 +109,7 @@ Copy the Linux CA certs into the trust anchors directory:
 cp certs/lin/* /etc/pki/ca-trust/source/anchors/
 ```
 
-![Copying CA certificates to the trust anchors directory](./images/05-copy-ca-to-trust-anchors.png)
+![Copying CA certificates to the trust anchors directory]([./images/05-copy-ca-to-trust-anchors.png](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20Copy%20Linux%20Certificate.png))
 
 Then update the system trust store:
 
@@ -117,7 +117,7 @@ Then update the system trust store:
 update-ca-trust extract
 ```
 
-![Updating the system CA trust store](./images/06-update-ca-trust-extract.png)
+![Updating the system CA trust store]([./images/06-update-ca-trust-extract.png](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20Update%20CA%20Trust.png))
 
 Running this command establishes trust between your `oc-helper` machine and vCenter, which the installer relies on for all subsequent API calls.
 
@@ -139,7 +139,7 @@ Keeping everything in one directory matters — the installer writes cluster sta
 
 Upload the downloaded installer and client archives into the `ocp418` directory:
 
-![Installer and client archives uploaded to the working directory](./images/07-uploaded-installer-files.jpg)
+![Installer and client archives uploaded to the working directory]([./images/07-uploaded-installer-files.jpg](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%208%20-%20Upload%20to%20directory.jpg))
 
 ### 8.1 Extract and install the `oc` client
 
