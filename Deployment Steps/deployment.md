@@ -75,7 +75,7 @@ Configure a DHCP server (Windows DHCP role, `dnsmasq`, `isc-dhcp-server`, etc.) 
 
 Open your vCenter home page, right-click **Download trusted root CA certificates**, and choose **Save Link As**. This downloads a `download.zip` file.
 
-![Downloading the vCenter trusted root CA certificate]([./images/02-vcenter-download-ca-cert.jpg](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20vCenter%20Trusted%20Root%20CA%20Download.jpg))
+![Downloading the vCenter trusted root CA certificate]([./images/02-vcenter-download-ca-cert.jpg](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%206%20-%20vCenter%20Trusted%20Root%20CA%20Download.jpg)
 
 Upload `download.zip` to your `oc-helper` Linux machine, then unzip it:
 
