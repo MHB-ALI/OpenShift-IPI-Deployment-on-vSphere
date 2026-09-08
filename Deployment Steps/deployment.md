@@ -139,7 +139,7 @@ Keeping everything in one directory matters — the installer writes cluster sta
 
 Upload the downloaded installer and client archives into the `ocp418` directory:
 
-![Installer and client archives uploaded to the working directory]([./images/07-uploaded-installer-files.jpg](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/5e70c54ffbd34f1601d9742c64d6e8cf667f20aa/Images/Step%208%20-%20Upload%20to%20directory.jpg))
+![Installer and client archives uploaded to the working directory](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%208%20-%20Upload%20to%20directory.jpg)
 
 ### 8.1 Extract and install the `oc` client
 
@@ -147,7 +147,7 @@ Upload the downloaded installer and client archives into the `ocp418` directory:
 tar xvf openshift-client-linux-amd64-rhel9.tar.gz
 ```
 
-![Extracting the OpenShift client](./images/08-extract-oc-client.jpg)
+![Extracting the OpenShift client](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%208%20-%20Extract%20Openshift%20Client.jpg)
 
 Move `oc` and `kubectl` to a directory on your `PATH` (per the bundled `README.md`):
 
@@ -167,7 +167,7 @@ Move the `openshift-install` binary to the same location:
 cp openshift-install /usr/local/bin
 ```
 
-![Extracting and installing the openshift-install binary](./images/09-extract-openshift-installer.jpg)
+![Extracting and installing the openshift-install binary](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%208%20-%20Copy%20Openshift%20Installer.jpg)
 
 ---
 
@@ -192,25 +192,25 @@ The installer runs an interactive wizard and prompts for:
 | Cluster (compute cluster) | `/TESTLAB-DC/host/esxi01-testlab` *(auto-detected if only one exists)* |
 | Default Datastore | `/TESTLAB-DC/datastore/Unity-DS1` |
 | Network | `VM Network` |
-| Virtual IP Address for API | `192.168.1.148` |
-| Virtual IP Address for Ingress | `192.168.1.149` |
+| Virtual IP Address for API | `192.168.x.x` |
+| Virtual IP Address for Ingress | `192.168.x.x` |
 | Base Domain | `testlab.local` |
 | Cluster Name | `ocp418` |
 | Pull Secret | *(pasted — see below)* |
 
-![install-config.yaml wizard – vCenter and network prompts](./images/10-install-config-prompts-part1.jpg)
+![install-config.yaml wizard – vCenter and network prompts](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%209%20-%20Create%20Intall-Config%20YAML.jpg)
 
 For the **Pull Secret** prompt, go back to the Hybrid Cloud Console page from Step 5 and click **Copy pull secret**:
 
-![Copying the pull secret from the Hybrid Cloud Console](./images/11-copy-pull-secret.jpg)
+![Copying the pull secret from the Hybrid Cloud Console](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%209%20-%20Copy%20Secret.jpg)
 
 Paste it in when prompted:
 
-![Pasting the pull secret to complete the install-config wizard](./images/12-install-config-prompts-part2.jpg)
+![Pasting the pull secret to complete the install-config wizard](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%209%20-%20Paste%20Secret.jpg)
 
 Once complete, the installer writes `install-config.yaml` into the `ocp418` directory:
 
-![install-config.yaml generated in the working directory](./images/13-install-config-generated.jpg)
+![install-config.yaml generated in the working directory](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%209%20-%20Config%20YAML%20Created.jpg)
 
 You can review the generated file at any time with:
 
@@ -236,7 +236,7 @@ openshift-install create cluster .
 
 The installer will now provision the bootstrap node, control plane, and compute nodes in vCenter, and bring up the cluster. This typically takes **around 45 minutes**.
 
-![openshift-install create cluster in progress](./images/14-create-cluster-output.jpg)
+![openshift-install create cluster in progress](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/a92914de3ddccb819088a522ce4321cafa3df31f/Images/Step%209%20-%20Deploy%20Openshift%20Cluster.jpg)
 
 On success, the installer prints the cluster's console URL and `kubeadmin` credentials, and writes a `kubeconfig` file you can use with `oc` to access the cluster.
 
