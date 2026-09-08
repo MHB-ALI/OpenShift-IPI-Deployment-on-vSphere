@@ -164,4 +164,4 @@ Before installation, you must pre-create the following DNS records. Both must be
 
 ---
 
-*Next: [Deployment Steps](./02-deployment.md) — installing OpenShift Container Platform on vSphere using the IPI method.*
+*Next: [Deployment Steps]([./02-deployment.md](https://github.com/MHB-ALI/OpenShift-IPI-Deployment-on-vSphere/blob/e40358a3a3d201292bbb29ec6513b49b493f296b/Deployment%20Steps/deployment.md)) — installing OpenShift Container Platform on vSphere using the IPI method.*
